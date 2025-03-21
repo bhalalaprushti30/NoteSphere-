@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease-in-out;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#addNote, #toggleDarkMode {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 5px;
+}
+#search {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+#notesContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.note {
+    background: rgba(255, 255, 0, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 200px;
+    min-height: 100px;
+    transition: transform 0.2s;
+    resize: both;
+    overflow: auto;
+}
+.note:hover {
+    transform: scale(1.05);
+}
+.delete, .pin {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.pin {
+    right: 30px;
+    background: gold;
+}
+.dark-mode {
+    background-color: #333;
+    color: white;
+}
+.dark-mode .container {
+    background: #444;
+    color: white;
+}
+.dark-mode .note {
+    background: rgba(255, 255, 0, 0.6);
+}
